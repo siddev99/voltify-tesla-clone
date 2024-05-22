@@ -12,6 +12,8 @@ interface MainMenu {
   alt: string;
   b1: string;
   b2: string;
+  href1: string;
+  href2: string;
 }
 
 interface SideMenu {
@@ -27,6 +29,8 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Model S",
     b1: "Learn",
     b2: "Order",
+    href1: "/Model-S",
+    href2: "",
   },
 
   {
@@ -36,6 +40,8 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Model 3",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
   {
     id: 3,
@@ -44,6 +50,8 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Model X",
     b1: "Learn",
     b2: "Order",
+    href1: "/Model-X",
+    href2: "",
   },
   {
     id: 4,
@@ -52,6 +60,8 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Model Y",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
   {
     id: 5,
@@ -60,6 +70,8 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Cybertruck",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
   {
     id: 6,
@@ -68,6 +80,8 @@ const vehiclesMenu: MainMenu[] = [
     alt: "All Models",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
 ];
 
@@ -118,6 +132,8 @@ const energyMenu: MainMenu[] = [
     alt: "Solar Panels",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
 
   {
@@ -127,6 +143,8 @@ const energyMenu: MainMenu[] = [
     alt: "Solar Roof",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
   {
     id: 3,
@@ -135,6 +153,8 @@ const energyMenu: MainMenu[] = [
     alt: "Powerwall",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
   {
     id: 4,
@@ -143,6 +163,8 @@ const energyMenu: MainMenu[] = [
     alt: "Megapack",
     b1: "Learn",
     b2: "Order",
+    href1: "",
+    href2: "",
   },
 ];
 
@@ -185,6 +207,8 @@ const chargingMenu: MainMenu[] = [
     alt: "Charging",
     b1: "Learn",
     b2: "",
+    href1: "",
+    href2: "",
   },
   {
     id: 2,
@@ -193,6 +217,8 @@ const chargingMenu: MainMenu[] = [
     alt: "Charging",
     b1: "Learn",
     b2: "Shop",
+    href1: "",
+    href2: "",
   },
   {
     id: 3,
@@ -201,6 +227,8 @@ const chargingMenu: MainMenu[] = [
     alt: "Charging",
     b1: "Learn",
     b2: "Find",
+    href1: "",
+    href2: "",
   },
 ];
 
@@ -243,6 +271,8 @@ const Shop: MainMenu[] = [
     alt: "Charging",
     b1: "",
     b2: "",
+    href1: "",
+    href2: "",
   },
   {
     id: 2,
@@ -251,6 +281,8 @@ const Shop: MainMenu[] = [
     alt: "VehicleAccessories",
     b1: "",
     b2: "",
+    href1: "",
+    href2: "",
   },
   {
     id: 3,
@@ -259,6 +291,8 @@ const Shop: MainMenu[] = [
     alt: "Apparel",
     b1: "",
     b2: "",
+    href1: "",
+    href2: "",
   },
   {
     id: 4,
@@ -267,6 +301,8 @@ const Shop: MainMenu[] = [
     alt: "Lifestyle",
     b1: "",
     b2: "",
+    href1: "",
+    href2: "",
   },
 ];
 

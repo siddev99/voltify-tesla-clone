@@ -126,7 +126,7 @@ const Dropdown: React.FC<Props> = (props) => {
                 key={item.id}
                 className="flex justify-evenly flex-col  items-center"
               >
-                <Link href="/Model-S">
+                <Link href={item.href1}>
                   <img
                     src={item.image}
                     alt={item.alt}
@@ -138,7 +138,7 @@ const Dropdown: React.FC<Props> = (props) => {
                 </p>
                 <div className="flex justify-evenly w-[40%] md:[50%]">
                   <Link
-                    href="#"
+                    href={item.href1}
                     className="font-gothamSSM font-thin underline text-xs text-black"
                   >
                     {item.b1}

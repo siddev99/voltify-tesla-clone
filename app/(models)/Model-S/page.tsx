@@ -25,6 +25,25 @@ export default function page() {
       heading: "Yoke Steering",
       text: "Perfect Environment Air vents are hidden throughout the cabin, while tri-zone temperature controls, ventilated seats and HEPA filtration deliver the perfect environment.",
     },
+
+    {
+      desktop: "/home/Model-S/Video3-Desktop.webm",
+      mobile: "/home/Model-S/Video3-Mobile.webm",
+      heading: "Perfect Environment",
+      text: "Air vents are hidden throughout the cabin, while tri-zone temperature controls, ventilated seats and HEPA filtration deliver the perfect environment.",
+    },
+    {
+      desktop: "/home/Model-S/Video4-Desktop.webm",
+      mobile: "/home/Model-S/Video4-Mobile.webm",
+      heading: "Redesigned Second Row",
+      text: "Seating for three adults, with extra legroom, headroom and a stowable armrest with integrated storage and wireless charging.",
+    },
+    {
+      desktop: "/home/Model-S/Video5-Desktop.webm",
+      mobile: "/home/Model-S/Video5-Mobile.webm",
+      heading: "Tesla Arcade",
+      text: "Play games on your in-car touchscreens.",
+    },
   ];
 
   const handleVideoEnded = () => {
@@ -228,12 +247,12 @@ export default function page() {
             onEnded={handleVideoEnded}
           ></video>
         </div>
-        <div className="flex flex-col items-center mt-4">
-          <div className="flex">
+        <div className="flex flex-col  mt-4  w-[60%]">
+          <div className="flex ">
             {videoSets.map((_, index) => (
               <button
                 key={index}
-                className={`w-4 h-4 rounded-full mx-2 ${
+                className={`w-3 h-3 rounded-full mx-2 ${
                   currentVideoSet === index ? "bg-white" : "bg-gray-500"
                 }`}
                 onClick={() => handleDotClick(index)}
@@ -243,7 +262,7 @@ export default function page() {
               ></button>
             ))}
           </div>
-          <div className="mt-2">
+          <div className="mt-2 flex items-center  ">
             {videoSets.map((set, index) => (
               <div
                 key={index}
@@ -253,10 +272,104 @@ export default function page() {
                   opacity: currentVideoSet === index ? 1 : 0,
                 }}
               >
-                <h1>{set.heading}</h1>
-                <p>{set.text}</p>
+                <h1 className="font-gothamSSM font-bold text-xl">
+                  {set.heading}
+                </h1>
+                <p className="font-gothamSSM font-thin">{set.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <div>
+        <br></br>
+        <br></br>
+        <br></br>
+      </div>
+      <section>
+        <div className="grid grid-cols-1 sm:grid-rows-2 sm:m-16">
+          <div className="flex flex-col  h-fit sm:flex-row  justify-evenly">
+            <div className="w-full v sm:w-[40%] lg:w-[40%] xl:w-[40%]">
+              <picture className="block w-full">
+                <source
+                  srcSet="/home/Model-S/Section-4.1.jpg"
+                  media="(max-width: 599px) and (orientation: portrait), (max-width: 899px) and (orientation: landscape)"
+                />
+                <source
+                  srcSet="/home/Model-S/Section-4.1.jpg"
+                  media="(min-width: 900px) and (orientation: landscape)"
+                />
+                <source
+                  srcSet="/home/Model-S/Section-4.1.jpg"
+                  media="(min-width: 600px) and (orientation:portrait)"
+                />
+                <img
+                  src="/home/Model-S/Section-4.1.jpg"
+                  alt="Description of the image"
+                  className="block w-full object-cover"
+                />
+              </picture>
+            </div>
+            <br className="sm:hidden"></br>
+            <div className="flex flex-col justify-center   items-start   sm:w-[30%] sm:text-xs ">
+              <h1 className="font-gothamSSM lg:text-lg">Stay Connected</h1>
+              <br></br>
+              <p className="font-gothamSSM font-thin text-sm lg:text-lg ">
+                Instantly connect with multi-device Bluetooth, or fast charge
+                devices with wireless and 36-watt USB-C charging.
+              </p>
+            </div>
+          </div>
+          <br className="sm:hidden"></br>
+          <div className="flex flex-col-reverse h-fit   sm:flex-row justify-evenly">
+            <div className="flex flex-col justify-center mt-5  items-start   sm:w-[30%] sm:text-xs">
+              <h1 className="font-gothamSSM lg:text-lg">Immersive Sound</h1>
+              <br></br>
+              <p className="font-gothamSSM font-thin text-xs lg:text-lg">
+                A 22-speaker, 960-watt audio system with Active Road Noise
+                Reduction offers immersive listening and studio-grade sound
+                quality.
+              </p>
+            </div>
+            <div className="w-full  sm:w-[40%] lg:w-[40%] xl:w-[40%]">
+              <video
+                src="/home/Model-S/Section-4.2-Desktop.webm"
+                autoPlay
+              ></video>
+            </div>
+          </div>
+          <div className="flex flex-col  h-fit sm:flex-row  justify-evenly">
+            <div className="w-full v sm:w-[40%] lg:w-[40%] xl:w-[40%]">
+              <picture className="block w-full">
+                <source
+                  srcSet="/home/Model-S/Section-4.3-Desktop.jpeg"
+                  media="(max-width: 599px) and (orientation: portrait), (max-width: 899px) and (orientation: landscape)"
+                />
+                <source
+                  srcSet="/home/Model-S/Section-4.3-Desktop.jpeg"
+                  media="(min-width: 900px) and (orientation: landscape)"
+                />
+                <source
+                  srcSet="/home/Model-S/Section-4.3-Desktop.jpeg"
+                  media="(min-width: 600px) and (orientation:portrait)"
+                />
+                <img
+                  src="/home/Model-S/Section-4.3-Desktop.jpeg"
+                  alt="Description of the image"
+                  className="block w-full object-cover"
+                />
+              </picture>
+            </div>
+            <br className="sm:hidden"></br>
+            <div className="flex flex-col justify-center   items-start   sm:w-[30%] sm:text-xs ">
+              <h1 className="font-gothamSSM lg:text-lg">Room for Everything</h1>
+              <br></br>
+              <p className="font-gothamSSM font-thin text-sm lg:text-lg ">
+                With front and rear trunks and fold-flat seats you can fit your
+                bike without taking the wheel off—and your luggage too.
+                <u>Compare Models</u>
+              </p>
+            </div>
           </div>
         </div>
       </section>
