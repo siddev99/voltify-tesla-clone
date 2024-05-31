@@ -57,7 +57,7 @@ const Home = [
 
   {
     id: 5,
-    image: "/home/CyberTruck.jpg",
+    image: "/home/Cybertruck.jpg",
     CyberTrucklogo: "/icons/Cybertrucklogo.svg.png",
     content: [
       {
