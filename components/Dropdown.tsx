@@ -21,7 +21,6 @@ interface Props {
 
 const Dropdown: React.FC<Props> = (props) => {
   const { text } = props;
-  console.log(text);
   let menuData;
   let sideMenuData;
 

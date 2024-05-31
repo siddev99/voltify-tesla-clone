@@ -1,9 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable jsx-a11y/alt-text */
+// eslint-disable-next-line @next/next/no-img-element
 "use client";
 import Image from "next/image";
 import Head from "next/head";
 import Dropdown from "./Dropdown";
-import { SetStateAction, useState } from "react";
+import { useEffect, useState } from "react";
 import { navMenu } from "@/app/_data/Vehicles-Menu";
+import { usePathname, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 interface Item {
   id: number;
@@ -12,9 +18,15 @@ interface Item {
 export default function Topbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hover, setHover] = useState(false);
-  const [text, setText] = useState("");
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  // const pathname = usePathname();
+  // const searchParams = useSearchParams();
+
+  // const url = `${pathname}?${searchParams}`;
+  // console.log(url);
+
+  const text = "";
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setHover(false);
@@ -33,22 +45,22 @@ export default function Topbar() {
     <header className="w-full absolute z-10 flex justify-between space-y-3">
       {hover && (
         <div
-          className={`absolute left-0 w-full bg-gray-200 transition-all duration-300 ${
+          className={`absolute left-0 w-full bg-gray-200  transition-all duration-300 ${
             hover ? " opacity-100" : "max-h-0 opacity-0"
           } overflow-hidden`}
           onMouseLeave={handleMouseLeave}
         >
-          <Dropdown text={hoveredItem} />
+          <Dropdown text={hoveredItem!} />
         </div>
       )}
-      <div className="relative">
-        <Image
-          src="/Tesla_logo.png"
-          priority
-          alt="Tesla Logo"
-          width={25}
-          height={25}
-        />
+      <div className="relative p-3">
+        <Link href="/">
+          <img
+            src="/Tesla_logo.png"
+            alt="Tesla logo"
+            className="block  h-7 w-7 object-cover cursor-pointer"
+          ></img>
+        </Link>
       </div>
 
       {/* Desktop menu */}
@@ -61,7 +73,7 @@ export default function Topbar() {
             key={item.id}
           >
             <button
-              className={`justify-center w-full px-4 py-2 text-sm font-medium  text-gray-700 rounded-md focus:outline-none ${
+              className={`justify-center w-full px-4 py-2 text-sm font-medium  rounded-md focus:outline-none ${
                 hoveredItem === item.name ? "bg-gray-200" : ""
               }`}
             >
@@ -71,19 +83,20 @@ export default function Topbar() {
         ))}
       </div>
 
-      <div className="hidden md:flex relative items-center justify-around space-x-2">
-        <li className="text-black list-none">
+      <div className="hidden md:flex relative items-center justify-around space-x-2 ">
+        <li className="list-none text-white">
           <Image
             src="/icons/globe.png"
             alt="Country Language"
             height={20}
             width={20}
+            className=""
           />
         </li>
-        <li className="text-black list-none">
+        <li className=" list-none">
           <Image src="/icons/ask.png" alt="Help" height={20} width={20} />
         </li>
-        <li className="text-black list-none">
+        <li className="list-none">
           <Image src="/icons/user.png" alt="User" height={20} width={20} />
         </li>
       </div>

@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Topbar from "@/components/topbar";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -111,6 +112,7 @@ export default function page() {
     : videoSets[currentVideoSet].desktop;
   return (
     <div>
+      <Topbar />
       <section className="relative">
         <div>
           <picture className="block w-full h-screen">

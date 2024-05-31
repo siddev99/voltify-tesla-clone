@@ -40,7 +40,7 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Model 3",
     b1: "Learn",
     b2: "Order",
-    href1: "",
+    href1: "/model3-choose",
     href2: "",
   },
   {
@@ -60,7 +60,7 @@ const vehiclesMenu: MainMenu[] = [
     alt: "Model Y",
     b1: "Learn",
     b2: "Order",
-    href1: "",
+    href1: "/Model-Y",
     href2: "",
   },
   {
