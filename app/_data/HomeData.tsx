@@ -1,93 +1,104 @@
 const Home = [
   {
     id: 1,
-    image: "/home/Model-Y.jpeg",
+    mobileImg: "/home/home/S1-Mobile.jpg",
+    desktopImg: "/home/home/S1-Desktop.jpeg",
     content: [
       {
         title: "Model Y",
-        price1: "0.99% APR Financing",
-        price2: "From $299/mo¹ Lease After Est. Gas Savings",
+        price1: "From $31,490¹",
+        price2: "After Est. Savings",
       },
     ],
     button1: "Order Now",
     button2: "Demo Drive",
+    className: "T-Y",
   },
 
   {
     id: 2,
-    image: "/home/Model-3.jpg",
+    mobileImg: "/home/home/S2-Mobile.jpg",
+    desktopImg: "/home/home/S2-Desktop.jpg",
     content: [
       {
         title: "Model 3",
-        price1: "From $216/mo²",
-        price2: "After $83/mo Est. Savings",
+        price1: "From $33,990²",
+        price2: "After Est. Savings",
       },
     ],
     button1: "Order Now",
     button2: "Demo Drive",
+    className: "T-3",
   },
 
   {
     id: 3,
-    image: "/home/Model-X.jpg",
+    mobileImg: "/home/home/S3-Mobile.jpg",
+    desktopImg: "/home/home/S3-Desktop.jpg",
     content: [
       {
         title: "Model X",
         price1: "From $63,990³",
-        price2: "After Federal Tax Credit & Est. Gas Savings",
+        price2: "After Est. Savings",
       },
     ],
     button1: "Order Now",
     button2: "Demo Drive",
+    className: "T-X",
   },
 
   {
     id: 4,
-    image: "/home/Model-S.jpg",
+    mobileImg: "/home/home/S4-Mobile.jpg",
+    desktopImg: "/home/home/S4-Desktop.jpg",
     content: [
       {
         title: "Model S",
         price1: "From $66,490⁴",
-        price2: "After Est. Gas Savings",
+        price2: "After Est. Savings",
       },
     ],
     button1: "Order Now",
     button2: "Demo Drive",
+    className: "T-S",
   },
 
-  {
-    id: 5,
-    image: "/home/Cybertruck.jpg",
-    CyberTrucklogo: "/icons/Cybertrucklogo.svg.png",
-    content: [
-      {
-        title: "CyberTruck",
-        price1: "",
-        price2: "",
-      },
-    ],
-    button1: "Order Now",
-    button2: "Learn More",
-  },
+  // {
+  //   id: 5,
+  //   image: "/home/Cybertruck.jpg",
+  //   CyberTrucklogo: "/icons/Cybertrucklogo.svg.png",
+  //   content: [
+  //     {
+  //       title: "CyberTruck",
+  //       price1: "",
+  //       price2: "",
+  //     },
+  //   ],
+  //   button1: "Order Now",
+  //   button2: "Learn More",
+  // },W
 
   {
     id: 6,
-    image: "/home/SolarPanels.jpeg",
+    mobileImg: "/home/home/S6-Mobile.jpg",
+    desktopImg: "/home/home/S6-Desktop.jpeg",
     content: [
       {
         title: "Solar Panels",
-        price1: "Produce Clean Energy From Your Roof",
+        price1: "Schedule a Virtual Consultation",
         price2: "",
       },
     ],
     panelsTextColor: "text-white",
     button1: "Order Now",
     button2: "Learn More",
+    className: "S-P",
   },
 
   {
     id: 7,
-    image: "/home/SolarRoof.jpeg",
+    mobileImg: "/home/home/S7-Mobile.jpeg",
+    desktopImg: "/home/home/S7-Desktop.jpeg",
     content: [
       {
         title: "Solar Roof",
@@ -97,11 +108,13 @@ const Home = [
     ],
     button1: "Order Now",
     button2: "Learn More",
+    className: "S-R",
   },
 
   {
     id: 8,
-    image: "/home/Powerwall.jpg",
+    mobileImg: "/home/home/S8-Mobile.jpg",
+    desktopImg: "/home/home/S8-Desktop.jpg",
     content: [
       {
         title: "Powerwall",
@@ -111,11 +124,13 @@ const Home = [
     ],
     button1: "Order Now",
     button2: "Learn More",
+    className: "P",
   },
 
   {
     id: 9,
-    image: "/home/Accessories.jpg",
+    mobileImg: "/home/home/S9-Mobile.jpg",
+    desktopImg: "/home/home/S9-Desktop.jpg",
     content: [
       {
         title: "Accessories",
@@ -123,8 +138,9 @@ const Home = [
         price2: "",
       },
     ],
-    button1: "Order Now",
+    button1: "Shop Now",
     button2: "",
+    className: "A",
   },
 ];
 

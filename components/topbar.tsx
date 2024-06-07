@@ -64,8 +64,8 @@ export default function Topbar() {
       </div>
 
       {/* Desktop menu */}
-
-      <div className="hidden md:flex items-center relative  font-gothamSSM font-medium text-sm">
+      {}
+      <div className="hidden xl:flex items-center relative  font-gothamSSM font-medium text-sm">
         {navMenu.map((item) => (
           <li
             className="text-black list-none"
@@ -83,7 +83,7 @@ export default function Topbar() {
         ))}
       </div>
 
-      <div className="hidden md:flex relative items-center justify-around space-x-2 ">
+      <div className="hidden xl:flex relative items-center justify-around space-x-2 ">
         <li className="list-none text-white">
           <Image
             src="/icons/globe.png"
@@ -101,7 +101,7 @@ export default function Topbar() {
         </li>
       </div>
 
-      <div className="md:hidden item-center">
+      <div className="xl:hidden item-center">
         <button onClick={toggleMenu} className="text-black focus:outline-none">
           Menu
         </button>
@@ -109,9 +109,9 @@ export default function Topbar() {
 
       {/* Mobile menu button */}
       {isOpen && (
-        <div className="md:hidden absolute bg-white  left-0 w-full h-screen">
+        <div className="xl:hidden absolute bg-white  left-0 w-full h-auto">
           <div className="flex flex-col font-gothamSSM font-medium text-s  p-5 items-start h-screen">
-            <button
+            {/* <button
               onClick={toggleMenu}
               className="text-black focus:outline-none w-full flex items-end justify-end  "
             >
@@ -129,7 +129,7 @@ export default function Topbar() {
                   d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
                 ></path>
               </svg>
-            </button>
+            </button> */}
 
             <div className="h-full flex flex-col w-full items-start gap-16">
               {/* <div className="bg-red-400 absolute h-full w-auto">
@@ -143,13 +143,13 @@ export default function Topbar() {
               <button className="text-black">Discover</button>
               <button className="text-black">Shop</button>
               <button className="text-black">Support</button>
-              <Image
+              {/* <Image
                 src="/icons/globe.png"
                 alt="Country Language"
                 height={20}
                 width={20}
               />
-              <Image src="/icons/user.png" alt="User" height={20} width={20} />
+              <Image src="/icons/user.png" alt="User" height={20} width={20} /> */}
             </div>
           </div>
         </div>

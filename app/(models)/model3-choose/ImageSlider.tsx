@@ -25,6 +25,9 @@ const ImageSlider: React.FC = () => {
   const startY = useRef<number | null>(null);
   const isScrolling = useRef<boolean>(false);
 
+  const [isTall, setIsTall] = useState(false);
+  const [isShort, setIsShort] = useState(false);
+
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startY.current = e.touches[0].clientY;
   };
@@ -74,6 +77,10 @@ const ImageSlider: React.FC = () => {
     };
   }, []);
 
+  const handleSwitchPerformance = () => {
+    setIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
+  };
+
   return (
     <div
       onTouchStart={handleTouchStart}
@@ -112,17 +119,45 @@ const ImageSlider: React.FC = () => {
           </picture>
         ))}
       </div>
-      <div className="absolute  text-wrap  font-gothamSSM top-40 items-center   flex flex-col    min-[900px]:top-[200px] min-[900px]:w-full  min-[900px]:items-start  min-[900px]:pl-8 xl:pl-52 2xl:pl-80">
+      {/* <div className="absolute  text-wrap  font-gothamSSM top-40 items-center   flex flex-col    min-[900px]:top-[200px] min-[900px]:w-full  min-[900px]:items-start  min-[900px]:pl-8 xl:pl-52 2xl:pl-80">
         <h1 className="text-4xl xl:text-5xl">Model 3</h1>
         <h4 className="text-base xl:text-xl">{images[index].mode}</h4>
-      </div>
-      <div className="absolute bottom-6 w-full flex flex-col items-center gap-6 min-[900px]:h-full min-[900px]:justify-center min-[900px]:items-start min-[900px]:bottom-0 min-[900px]:pl-8 xl:pl-52 2xl:pl-80">
-        <button className="bg-[#3e6ae1] font-gothamSSM font-normal text-sm w-full max-w-xs py-3 hover:bg-[#3457b1] rounded sm:w-80 md:w-96 lg:w-64">
+      </div> */}
+      <div
+        className={
+          "absolute bottom-6 w-full flex flex-col gap-6 portrait:items-center landscape:justify-center landscape:h-full landscape:items-start  landscape:pl-[10%] landscape:pr-[90%]"
+        }
+      >
+        <button className="bg-[#3e6ae1] font-gothamSSM font-normal text-sm w-full max-w-xs py-3 hover:bg-[#3457b1] rounded sm:w-64 md:w-96 lg:w-64">
           <Link href="">Order Now</Link>
         </button>
-        <button className="bg-[#222222] font-gothamSSM font-normal text-sm w-full max-w-xs py-3 hover:bg-[#393c41] rounded sm:w-80 md:w-96 lg:w-64">
+        <button className="bg-[#222222] font-gothamSSM font-normal text-sm w-full max-w-xs py-3 hover:bg-[#393c41] rounded sm:w-64 md:w-96 lg:w-64">
           <Link href="">Learn More</Link>
         </button>
+        <p
+          style={{
+            animation: "blink 2s infinite",
+            cursor: "pointer",
+          }}
+          className="sm:w-64 md:w-96 lg:w-64"
+          onClick={handleSwitchPerformance}
+        >
+          Switch to {`${images[index].mode}`}
+        </p>
+
+        <style jsx>{`
+          @keyframes blink {
+            0% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        `}</style>
       </div>
     </div>
   );

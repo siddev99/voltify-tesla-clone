@@ -16,6 +16,197 @@
   }
 }
 
+@media (orientation: landscape) and (min-width: 600px) {
+  .T-Y {
+    margin-top: 100px;
+  }
+  .T-3 {
+    margin-top: 100px;
+  }
+  .T-X {
+    margin-top: 100px;
+  }
+  .T-S {
+    margin-top: 100px;
+  }
+
+  .S-P {
+    margin-top: 90px;
+  }
+
+  .S-R {
+    margin-top: 90px;
+  }
+
+  .P {
+    margin-top: 110px;
+  }
+
+  .A {
+    margin-top: 110px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 431px) {
+  .T-Y {
+    margin-top: 10px;
+  }
+  .T-3 {
+    margin-top: 10px;
+  }
+  .T-X {
+    margin-top: 10px;
+  }
+  .T-S {
+    margin-top: 10px;
+  }
+
+  .S-P {
+    margin-top: 10px;
+  }
+
+  .S-R {
+    margin-top: 10px;
+  }
+
+  .P {
+    margin-top: 10px;
+  }
+
+  .A {
+    margin-top: 10px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 200px) and (max-width: 480px) {
+  .T-Y {
+    margin-top: 70px;
+  }
+  .T-3 {
+    margin-top: 120px;
+  }
+  .T-X {
+    margin-top: 120px;
+  }
+  .T-S {
+    margin-top: 120px;
+  }
+  .S-P {
+    margin-top: 100px;
+  }
+
+  .S-R {
+    margin-top: 100px;
+  }
+
+  .S-P {
+    margin-top: 100px;
+  }
+
+  .P {
+    margin-top: 100px;
+  }
+
+  .A {
+    margin-top: 100px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 480px) and (max-width: 540px) {
+  .T-3 {
+    margin-top: 70px;
+  }
+  .T-X {
+    margin-top: 70px;
+  }
+  .T-S {
+    margin-top: 70px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 540px) and (max-height: 720px) {
+  .T-Y {
+    margin-top: 10px;
+  }
+  .T-3 {
+    margin-top: 90px;
+  }
+  .T-X {
+    margin-top: 70px;
+  }
+  .T-S {
+    margin-top: 70px;
+  }
+
+  .P {
+    margin-top: 120px;
+  }
+
+  .A {
+    margin-top: 120px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 700px) and (max-width: 865px) {
+  .T-Y {
+    margin-top: 70px;
+  }
+  .T-3 {
+    margin-top: 70px;
+  }
+  .T-X {
+    margin-top: 70px;
+  }
+  .T-S {
+    margin-top: 70px;
+  }
+  .S-P {
+    margin-top: 120px;
+  }
+
+  .S-R {
+    margin-top: 120px;
+  }
+
+  .P {
+    margin-top: 120px;
+  }
+
+  .A {
+    margin-top: 120px;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 1024px) {
+  .T-Y {
+    margin-top: 140px;
+  }
+  .T-3 {
+    margin-top: 140px;
+  }
+  .T-X {
+    margin-top: 140px;
+  }
+  .T-S {
+    margin-top: 140px;
+  }
+  .S-P {
+    margin-top: 140px;
+  }
+
+  .S-R {
+    margin-top: 140px;
+  }
+
+  .P {
+    margin-top: 140px;
+  }
+
+  .A {
+    margin-top: 140px;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -31,6 +222,3 @@ body {
     text-wrap: balance;
   }
 }
-
-
-
