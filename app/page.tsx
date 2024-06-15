@@ -1,14 +1,29 @@
+"use client";
 import Link from "next/link";
 import Home from "./_data/HomeData";
-import Topbar from "@/components/topbar";
+import TopNav from "@/components/TopNav";
+import { useEffect, useState } from "react";
+import { tree } from "next/dist/build/templates/app-page";
 
 export default function Page() {
+  const [hide, setHide] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState<boolean>();
+  useEffect(() => {}, [hide]);
+
+  const toggleNavbarVisibility = (visibility: boolean) => {
+    console.log("isNavbarVisible", isNavbarVisible);
+    setIsNavbarVisible(visibility);
+  };
   return (
     <>
-      <Topbar />
       <section className="relative">
+        <TopNav toggleVisibility={toggleNavbarVisibility} />
+
         {Home.map((item) => (
-          <div key={item.id} className="relative">
+          <div
+            key={item.id}
+            className={`relative ${isNavbarVisible ? "opacity-50" : ""}`}
+          >
             <div
               className={` ${item.className} absolute w-full flex justify-center font-gothamSSM items-center text-center`}
             >

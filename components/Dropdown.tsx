@@ -118,8 +118,8 @@ const Dropdown: React.FC<Props> = (props) => {
           </div>
         </div>
       ) : (
-        <div className="h-auto left-0 right-0 w-full bg-white flex justify-evenly  shadow-lg p-24">
-          <div className="grid grid-cols-1 w-[70%]   md:grid-cols-2 lg:grid-cols-4">
+        <div className="h-auto left-0 right-0 w-full bg-white flex flex-col justify-evenly  shadow-lg p-14">
+          <div className="grid grid-cols-1 w-full bg-yellow-50  md:grid-cols-2 lg:grid-cols-4">
             {menuData.map((item) => (
               <div
                 key={item.id}
@@ -152,9 +152,11 @@ const Dropdown: React.FC<Props> = (props) => {
               </div>
             ))}
           </div>
-          <div
+          {/* <div
             className={`${
-              text === "Shop" ? "hidden" : "h-auto w-[1px]  bg-gray-700"
+              text === "Shop"
+                ? "hidden"
+                : "w-auto    md:h-auto md:w-[1px]  bg-gray-700 "
             }`}
           ></div>
 
@@ -170,7 +172,7 @@ const Dropdown: React.FC<Props> = (props) => {
                 <li>{item.name}</li>
               </ul>
             ))}
-          </div>
+          </div> */}
         </div>
       )}
     </div>

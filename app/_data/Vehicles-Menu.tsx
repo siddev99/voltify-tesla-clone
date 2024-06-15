@@ -3,6 +3,7 @@ import React from "react";
 interface NavItem {
   id: number;
   name: string;
+  subMenu: { id: number; name: string }[];
 }
 
 interface MainMenu {
@@ -310,22 +311,42 @@ const navMenu: NavItem[] = [
   {
     id: 1,
     name: "Vehicles",
+    subMenu: [
+      { id: 1, name: "Course 1" },
+      { id: 2, name: "Course 2" },
+    ],
   },
   {
     id: 2,
     name: "Energy",
+    subMenu: [
+      { id: 1, name: "Course 1" },
+      { id: 2, name: "Course 2" },
+    ],
   },
   {
     id: 3,
     name: "Charging",
+    subMenu: [
+      { id: 1, name: "Course 1" },
+      { id: 2, name: "Course 2" },
+    ],
   },
   {
     id: 4,
     name: "Discover",
+    subMenu: [
+      { id: 1, name: "Course 1" },
+      { id: 2, name: "Course 2" },
+    ],
   },
   {
     id: 5,
     name: "Shop",
+    subMenu: [
+      { id: 1, name: "Course 1" },
+      { id: 2, name: "Course 2" },
+    ],
   },
 ];
 
