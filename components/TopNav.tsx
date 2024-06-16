@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleVisibility }) => {
               <li
                 key={item.id}
                 //onMouseEnter={() => handleMouseEnter(item)}
-                className={`flex-row flex justify-evenly w-full mt-[10%]`}
+                className={`flex-row flex justify-evenly items-start w-full mt-[10%]`}
               >
                 <button
                   className={`mt-2 justify-center w-full h-fit py-2 text-sm font-medium rounded-md focus:outline-none  ${
